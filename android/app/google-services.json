@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "284020831119",
+    "firebase_url": "https://flash-chat-f4729.firebaseio.com",
+    "project_id": "flash-chat-f4729",
+    "storage_bucket": "flash-chat-f4729.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284020831119:android:574c2d2c4cc3592e5a51fa",
+        "android_client_info": {
+          "package_name": "co.ikuma.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284020831119-oifkm7eeq90her0466c08hka7sfg63fr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC90tPrBceGgkUPRD3qDqY0bLyq-usBXmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284020831119-oifkm7eeq90her0466c08hka7sfg63fr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
