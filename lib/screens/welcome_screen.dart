@@ -21,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
 
     controller =
-        AnimationController(duration: Duration(seconds: 1), vsync: this);
+        AnimationController(duration: Duration(seconds: 3), vsync: this);
 
     // 色が変わるアニメーション
     animation =
@@ -37,6 +37,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   void dispose() {
     super.dispose();
+    controller.dispose();
   }
 
   @override
