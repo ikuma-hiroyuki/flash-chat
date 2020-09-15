@@ -9,7 +9,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  // final _auth = FirebaseAuth.instance;
+  // final _auth = FirebaseAuth.instance; -> これはエラーになる
   final _auth = auth.FirebaseAuth.instance;
   auth.User loggindInUser;
 
@@ -19,14 +19,12 @@ class _ChatScreenState extends State<ChatScreen> {
     getCurrentUser();
   }
 
-  void getCurrentUser() async {
+  void getCurrentUser() {
     try {
-      // ignore: await_only_futures
-      final user = await _auth.currentUser;
+      final user = _auth.currentUser;
       if (_auth.currentUser != null) {
-        // loggindInUser = _auth.currentUser;
+        // loggindInUser = _auth.currentUser; -> これはエラーになる
         loggindInUser = user;
-        print(loggindInUser.email);
       }
     } catch (e) {
       print(e);
@@ -42,7 +40,9 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
-                //Implement logout functionality
+                //サインアウト
+                _auth.signOut();
+                Navigator.pop(context);
               }),
         ],
         title: Text('⚡️Chat'),

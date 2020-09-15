@@ -53,7 +53,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             TextField(
               obscureText: true,
               textAlign: TextAlign.center,
-              onChanged: (value) {
+              onChanged: (value) { 
                 //Do something with the user input.
                 password = value;
               },
@@ -69,7 +69,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               onPressed: () async {
                 try {
                   final newUser = await _auth.createUserWithEmailAndPassword(
-                      email: email, password: password);
+                      email: email.trim(), password: password.trim());
                   if (newUser != null) {
                     Navigator.pushNamed(context, ChatScreen.id);
                   }
